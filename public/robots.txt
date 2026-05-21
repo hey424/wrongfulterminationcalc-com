@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wrongfulterminationcalc.com/sitemap-index.xml

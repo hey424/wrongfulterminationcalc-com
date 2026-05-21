@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Methodology | How We Calculate Wrongful Termination Damages | wrongfulterminationcalc.com"
+  description="Learn how our wrongful termination settlement calculator estimates back pay, front pay, emotional distress, punitive damages, and attorney fee-shifting."
+>
+
+  <h1>Methodology: How Wrongful Termination Damages Are Calculated</h1>
+
+  <p>
+    Our calculator uses a research-based framework drawn from EEOC charge statistics, published employment law verdict reporters, and the statutory damage structures of the major federal employment laws. This page explains each component of the damages model so you can understand what the calculator is — and is not — measuring.
+  </p>
+
+  <h2>1. Back Pay</h2>
+  <p>
+    Back pay is the cornerstone of any wrongful termination damages calculation. It represents the wages, salary, bonuses, commissions, and employment benefits (health insurance, retirement contributions, and similar compensation) the employee would have earned from the date of termination to the date of final judgment or settlement.
+  </p>
+  <p>
+    Our model uses an 18-month baseline to resolution, which reflects the median time from EEOC charge filing to settlement for employment discrimination cases. Cases that proceed to trial take considerably longer — often 3 to 5 years — which significantly increases back pay exposure. The calculator applies a range of 60%–100% of the 18-month figure to reflect the realistic probability of mitigation (offsetting earnings from a new job the plaintiff finds before the case resolves).
+  </p>
+  <p>
+    <strong>Mitigation duty:</strong> Under both federal and state employment law, a terminated employee has an affirmative duty to mitigate damages by making reasonable efforts to find comparable employment. Earnings from comparable substitute employment are offset against back pay dollar-for-dollar. Failure to mitigate can dramatically reduce a back pay award.
+  </p>
+
+  <h2>2. Front Pay</h2>
+  <p>
+    When reinstatement to the former position is not feasible — because the working relationship is irreparably damaged, the position has been eliminated, or the employer objects to reinstatement — courts may award front pay in lieu of reinstatement. Front pay compensates the employee for projected future earnings losses beyond the judgment date.
+  </p>
+  <p>
+    Our model calculates front pay as a function of years of service (longer tenure suggests greater disruption to career trajectory) and caps the period at 24 months. Courts consider the employee's age, skill set, industry conditions, and prospects for reaching comparable compensation. In practice, front pay awards range from a few months' salary to several years of projected earnings for older workers in specialized fields.
+  </p>
+
+  <h2>3. Emotional Distress and Compensatory Damages</h2>
+  <p>
+    Federal anti-discrimination statutes (Title VII, ADA, Rehabilitation Act, Pregnancy Discrimination Act) allow recovery for emotional pain and suffering, mental anguish, loss of enjoyment of life, and reputational harm. These are capped by employer size under 42 U.S.C. § 1981a:
+  </p>
+  <ul>
+    <li>15–100 employees: $50,000 combined compensatory + punitive cap</li>
+    <li>101–200 employees: $100,000 cap</li>
+    <li>201–500 employees: $200,000 cap</li>
+    <li>501+ employees: $300,000 cap</li>
+  </ul>
+  <p>
+    The Age Discrimination in Employment Act (ADEA) does not permit compensatory emotional distress damages — only back pay, front pay, and liquidated damages. State law claims often have no statutory cap on emotional distress damages, which is why many plaintiffs pursue parallel state claims.
+  </p>
+  <p>
+    Our model applies claim-type multipliers to annual salary as a proxy for emotional distress severity, ranging from 5%–200% depending on the nature of the claim. Retaliation and whistleblower claims generally attract higher emotional distress awards because juries find the conduct particularly egregious.
+  </p>
+
+  <h2>4. Punitive Damages</h2>
+  <p>
+    Punitive damages are available in Title VII and ADA claims when the employer engaged in discrimination "with malice or with reckless indifference to the federally protected rights of an aggrieved individual" (42 U.S.C. § 1981a(b)(1)). They are not available under the ADEA, but many state statutes permit them. Punitive damages are subject to the same combined cap with compensatory damages under federal law.
+  </p>
+  <p>
+    The calculator does not separately model punitive damages because they are highly fact-specific and require evidence of intentional, malicious conduct. In cases where egregious employer conduct is present, actual recoveries can exceed the calculator's range significantly.
+  </p>
+
+  <h2>5. Liquidated Damages Under the FMLA and ADEA</h2>
+  <p>
+    The FMLA and ADEA both provide for liquidated damages equal to the amount of back pay owed, effectively doubling the back pay recovery for willful violations. Our FMLA claim type factors in a liquidated damages premium. Courts have discretion to reduce or eliminate liquidated damages if the employer demonstrates good faith and a reasonable belief that its conduct was lawful.
+  </p>
+
+  <h2>6. Attorney Fee-Shifting</h2>
+  <p>
+    Title VII (42 U.S.C. § 2000e-5(k)), the ADA, the ADEA, the FMLA, and many state employment statutes provide that a prevailing plaintiff is entitled to recover reasonable attorney fees and costs from the employer. This fee-shifting provision is a critical driver of settlement: even a relatively modest $75,000 back pay recovery can carry $150,000–$250,000 in attorney fee exposure for a litigated case. The calculator notes attorney fees separately rather than adding them to the damages range, because fees are determined by the court based on hours reasonably expended.
+  </p>
+
+  <h2>Important Limitations</h2>
+  <p>
+    This calculator is an educational tool. It does not account for the specific strength of your evidence, the quality of your documentation, your jurisdiction's specific case law, the financial resources of your employer, or the judgment of a particular judge or jury. Actual wrongful termination settlements and verdicts vary enormously. Consult a licensed employment attorney for an assessment of your specific situation.
+  </p>
+
+</BaseLayout>

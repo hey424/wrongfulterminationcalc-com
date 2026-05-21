@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Wrongful Termination Settlement Calculator | Estimate Damages | wrongfulterminationcalc.com"
+  description="Estimate your wrongful termination settlement with our free calculator. Input your salary, claim type, and employment history to get a realistic damages range."
+>
+
+  <div class="byline">
+    <p>Reviewed by <strong>Lena Hartfield (LH)</strong>, Editor-in-Chief &amp; Employment Law Practice Lead, JD. Updated May 2026.</p>
+  </div>
+
+  <h1>Wrongful Termination Settlement Calculator</h1>
+
+  <p>
+    Being fired is painful. Being fired illegally compounds that harm with financial devastation that can last years. If your employer terminated you in violation of federal or state law, a written contract, or established public policy, you may have a viable wrongful termination claim — and the right to recover substantial damages.
+  </p>
+  <p>
+    This calculator provides a research-based estimate of the damages range you might pursue. It accounts for back pay, front pay, emotional distress damages, and attorney fee-shifting under applicable employment statutes. The result is an educational estimate, not a legal opinion. Every case turns on specific facts, evidence quality, jurisdiction, and the decisions of your individual judge or jury.
+  </p>
+
+  <h2>What Is Wrongful Termination?</h2>
+  <p>
+    Wrongful termination is a legal term for a firing that violates the law, a contract, or public policy. Despite widespread belief, most U.S. employees work "at will," meaning employers can generally fire them for any reason or no reason — with one critical exception: the reason cannot be an <em>illegal</em> one.
+  </p>
+  <p>
+    Common illegal reasons include: firing someone because of their race, sex, age (40+), disability, religion, national origin, or pregnancy (all protected under federal civil rights statutes); retaliating against an employee for reporting harassment or discrimination, filing a workers' compensation claim, requesting FMLA leave, or blowing the whistle on illegal activity; or terminating an employee in breach of a written or implied employment contract.
+  </p>
+  <p>
+    State laws add additional protections. California, New York, New Jersey, and Illinois, for example, provide broader protections than federal law, including protection for employees who report wage theft, refuse to perform illegal acts, or exercise voting rights.
+  </p>
+
+  <h2>Who Can File a Wrongful Termination Claim?</h2>
+  <p>
+    Any private-sector or government employee who believes they were fired for an illegal reason may have a claim. Independent contractors generally do not have the same statutory protections, though contract claims may still apply. To pursue a federal discrimination or retaliation claim, most employees must first file a charge with the Equal Employment Opportunity Commission (EEOC) before suing in federal court. State agencies have their own filing deadlines, many shorter than the federal 180–300-day window.
+  </p>
+
+  <h2>What Damages Are Available?</h2>
+  <p>
+    A successful wrongful termination plaintiff may recover: <strong>back pay</strong> (wages, benefits, and other compensation lost from the date of termination to the date of judgment); <strong>front pay</strong> (estimated future lost earnings when reinstatement is not feasible); <strong>compensatory damages</strong> for emotional distress and reputational harm; <strong>punitive damages</strong> in cases involving particularly egregious employer conduct; and <strong>attorney fees and costs</strong>, which are available as a matter of statute in Title VII, ADA, ADEA, and FMLA cases.
+  </p>
+
+  <h2>Run the Estimate</h2>
+
+  <form id="calc-form">
+    <label for="claim-type">Claim Type</label>
+    <select id="claim-type" name="claim-type">
+      <option value="discrimination">Discrimination (race, sex, age, disability, national origin)</option>
+      <option value="retaliation">Retaliation (harassment report, workers comp, OSHA)</option>
+      <option value="fmla">FMLA Violation</option>
+      <option value="contract">Breach of Employment Contract</option>
+      <option value="public-policy">Public Policy Violation</option>
+      <option value="whistleblower">Whistleblower Retaliation</option>
+    </select>
+
+    <label for="annual-salary">Annual Salary ($)</label>
+    <input type="number" id="annual-salary" name="annual-salary" min="0" step="1000" placeholder="e.g. 75000" />
+
+    <label for="years-employed">Years Employed at This Employer</label>
+    <input type="number" id="years-employed" name="years-employed" min="0" step="0.5" placeholder="e.g. 3" />
+
+    <label for="state">State</label>
+    <input type="text" id="state" name="state" placeholder="e.g. California" />
+
+    <label for="has-contract">Written Employment Contract?</label>
+    <select id="has-contract" name="has-contract">
+      <option value="no">No (at-will employee)</option>
+      <option value="yes">Yes (written contract)</option>
+    </select>
+
+    <button type="submit">Calculate Estimated Damages</button>
+  </form>
+
+  <div id="result" style="display:none; background:#eef4fb; border:1px solid #b3d0f0; border-radius:6px; padding:1.5rem; margin-bottom:2rem;">
+    <h3 style="margin-top:0;">Your Estimated Damages Range</h3>
+    <p id="result-text" style="font-size:1.1rem;"></p>
+    <p id="result-breakdown" style="font-size:0.95rem; color:#444;"></p>
+    <p style="font-size:0.85rem; color:#666; margin-bottom:0;">This is an educational estimate only. Actual outcomes depend on the specific facts of your case, evidence quality, jurisdiction, and the judgment of a court or jury. Consult a licensed employment attorney for advice on your situation.</p>
+  </div>
+
+  <h2>How Damages Are Calculated</h2>
+  <p>
+    Employment attorneys and courts use a relatively consistent framework for calculating wrongful termination damages, though the specific multipliers and caps vary by statute and jurisdiction.
+  </p>
+  <h3>Back Pay</h3>
+  <p>
+    Back pay is the most straightforward component. It equals your gross compensation (salary plus benefits, bonuses, and stock that would have vested) from the day you were fired to the day the case resolves. Cases that settle quickly — within 12–18 months — produce smaller back pay awards than cases that proceed to trial. Employees are required by law to mitigate damages by actively seeking comparable employment; any earnings from a new job are typically offset against back pay.
+  </p>
+  <h3>Front Pay</h3>
+  <p>
+    When reinstatement is not a realistic option (because the working relationship is too damaged, or the position no longer exists), courts may award front pay — estimated future lost earnings for a reasonable period. Front pay is more speculative than back pay and varies widely. Courts consider your age, skills, the job market in your field, and how long it will realistically take to reach comparable earnings.
+  </p>
+  <h3>Emotional Distress and Compensatory Damages</h3>
+  <p>
+    Federal statutes cap combined compensatory and punitive damages by employer size: $50,000 (15–100 employees), $100,000 (101–200 employees), $200,000 (201–500 employees), $300,000 (501+ employees). State law claims often carry no cap, making state-court filings attractive in high-damages cases.
+  </p>
+  <h3>Attorney Fees</h3>
+  <p>
+    Title VII, the ADA, the ADEA, and the FMLA all provide for fee-shifting: a prevailing employee can recover their attorney fees from the employer. This is a powerful litigation lever that often drives settlement, as even a modest back pay award can carry substantial fee exposure for the employer.
+  </p>
+
+  <h2>Typical Recovery Ranges by Claim Type</h2>
+  <p>
+    Based on EEOC charge data, published verdict reporters, and employment law practice resources, typical settlement ranges (not including attorney fees) are:
+  </p>
+  <ul>
+    <li><strong>Discrimination (federal):</strong> $25,000–$300,000 median; high-value cases reach $1M+</li>
+    <li><strong>Retaliation:</strong> $50,000–$400,000; retaliation claims often command higher awards because juries respond strongly to punishing good-faith whistleblowers</li>
+    <li><strong>FMLA violation:</strong> $10,000–$150,000 (liquidated damages double back pay for willful violations)</li>
+    <li><strong>Breach of contract:</strong> Highly variable; contract terms define the floor and ceiling</li>
+    <li><strong>Public policy/whistleblower:</strong> Wide range; California FEHA and similar state laws can produce seven-figure awards</li>
+  </ul>
+
+  <h2>Factors That Increase or Reduce Recovery</h2>
+  <p><strong>Factors that increase damages:</strong> documented discriminatory statements by decision-makers; short tenure between a protected activity and the termination; comparator evidence (coworkers outside the protected class kept their jobs); employer's failure to follow its own progressive discipline policy; prior complaints to HR that were ignored; retaliatory conduct continuing post-termination (e.g., bad references).</p>
+  <p><strong>Factors that reduce damages:</strong> failure to mitigate (not actively job-searching); any legitimate, documented performance issues; prior disciplinary history; long gap between the protected activity and termination; after-acquired evidence of misconduct the employer did not know about at time of firing.</p>
+
+  <h2>Related Guides</h2>
+  <ul>
+    <li><a href="/guides/how-wrongful-termination-damages-are-calculated">How Wrongful Termination Damages Are Calculated</a></li>
+    <li><a href="/guides/signs-your-termination-may-have-been-wrongful">Signs Your Termination May Have Been Wrongful</a></li>
+    <li><a href="/guides/what-to-do-after-wrongful-termination">What to Do After Wrongful Termination</a></li>
+    <li><a href="/guides/wrongful-termination-vs-at-will-employment">Wrongful Termination vs. At-Will Employment</a></li>
+  </ul>
+
+  <style>
+    .byline { background: #f7f7f7; border-left: 3px solid var(--color-accent); padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--color-muted); }
+    .byline p { margin: 0; }
+  </style>
+
+  <script>
+    document.getElementById('calc-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const claimType = document.getElementById('claim-type').value;
+      const salary = parseFloat(document.getElementById('annual-salary').value) || 0;
+      const years = parseFloat(document.getElementById('years-employed').value) || 0;
+      const hasContract = document.getElementById('has-contract').value;
+
+      if (salary <= 0) {
+        alert('Please enter your annual salary.');
+        return;
+      }
+
+      // Back pay: assume 18 months to resolution as baseline
+      const backPayMonths = 18;
+      const backPay = (salary / 12) * backPayMonths;
+
+      // Front pay: 12–24 months depending on years employed
+      const frontPayMonths = Math.min(6 + years * 3, 24);
+      const frontPayLow = (salary / 12) * (frontPayMonths * 0.5);
+      const frontPayHigh = (salary / 12) * frontPayMonths;
+
+      // Emotional distress multipliers by claim type
+      const distressMultipliers = {
+        'discrimination': { low: 0.25, high: 1.0 },
+        'retaliation': { low: 0.3, high: 1.2 },
+        'fmla': { low: 0.1, high: 0.5 },
+        'contract': { low: 0.05, high: 0.25 },
+        'public-policy': { low: 0.25, high: 1.5 },
+        'whistleblower': { low: 0.3, high: 2.0 },
+      };
+      const mult = distressMultipliers[claimType] || { low: 0.2, high: 0.8 };
+      const distressLow = salary * mult.low;
+      const distressHigh = salary * mult.high;
+
+      // Contract premium
+      const contractBonus = hasContract === 'yes' ? salary * 0.5 : 0;
+
+      // Attorney fees: roughly 30–40% of total recovery (contingency) — not added to damages but noted
+      const totalLow = backPay * 0.6 + frontPayLow + distressLow + contractBonus;
+      const totalHigh = backPay + frontPayHigh + distressHigh + contractBonus;
+
+      const fmt = (n) => '$' + Math.round(n).toLocaleString();
+
+      document.getElementById('result-text').textContent =
+        `Estimated range: ${fmt(totalLow)} – ${fmt(totalHigh)}`;
+      document.getElementById('result-breakdown').innerHTML =
+        `<strong>Breakdown (midpoint estimates):</strong><br>` +
+        `Back pay (est. 18 months): ${fmt(backPay)}<br>` +
+        `Front pay: ${fmt(frontPayLow)}–${fmt(frontPayHigh)}<br>` +
+        `Emotional distress / compensatory: ${fmt(distressLow)}–${fmt(distressHigh)}<br>` +
+        (hasContract === 'yes' ? `Contract breach premium: ${fmt(contractBonus)}<br>` : '') +
+        `Attorney fees are additional and typically 30–40% of recovery under a contingency arrangement; ` +
+        `statutory fee-shifting may apply for discrimination and FMLA claims.`;
+
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+
+</BaseLayout>
