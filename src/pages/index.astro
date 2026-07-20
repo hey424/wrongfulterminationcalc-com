@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadCapture from '../components/LeadCapture.astro';
 ---
 <BaseLayout
   title="Wrongful Termination Settlement Calculator | Estimate Damages | wrongfulterminationcalc.com"
@@ -78,7 +79,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p style="font-size:0.85rem; color:#666; margin-bottom:0;">This is an educational estimate only. Actual outcomes depend on the specific facts of your case, evidence quality, jurisdiction, and the judgment of a court or jury. Consult a licensed employment attorney for advice on your situation.</p>
   </div>
 
-  <h2>How Damages Are Calculated</h2>
+  
+
+  <LeadCapture caseType="wrongful_termination" caseTypeLabel="Wrongful Termination" />
+<h2>How Damages Are Calculated</h2>
   <p>
     Employment attorneys and courts use a relatively consistent framework for calculating wrongful termination damages, though the specific multipliers and caps vary by statute and jurisdiction.
   </p>
@@ -117,10 +121,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <h2>Related Guides</h2>
   <ul>
-    <li><a href="/guides/how-wrongful-termination-damages-are-calculated">How Wrongful Termination Damages Are Calculated</a></li>
-    <li><a href="/guides/signs-your-termination-may-have-been-wrongful">Signs Your Termination May Have Been Wrongful</a></li>
-    <li><a href="/guides/what-to-do-after-wrongful-termination">What to Do After Wrongful Termination</a></li>
-    <li><a href="/guides/wrongful-termination-vs-at-will-employment">Wrongful Termination vs. At-Will Employment</a></li>
+    <li><a href="/guides/how-wrongful-termination-damages-are-calculated/">How Wrongful Termination Damages Are Calculated</a></li>
+    <li><a href="/guides/signs-your-termination-may-have-been-wrongful/">Signs Your Termination May Have Been Wrongful</a></li>
+    <li><a href="/guides/what-to-do-after-wrongful-termination/">What to Do After Wrongful Termination</a></li>
+    <li><a href="/guides/wrongful-termination-vs-at-will-employment/">Wrongful Termination vs. At-Will Employment</a></li>
   </ul>
 
   <style>
