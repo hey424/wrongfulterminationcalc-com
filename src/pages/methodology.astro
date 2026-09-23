@@ -7,10 +7,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
 
   <h1>Methodology: How Wrongful Termination Damages Are Calculated</h1>
-  <p><em>Reviewed by our editorial team. Updated June 2026.</em></p>
+  <p><em>Published by The Click Lab Agency LLC. Last reviewed September 2026. Not legal advice.</em></p>
 
   <p>
-    Our calculator uses a research-based framework drawn from EEOC charge statistics, published employment law verdict reporters, and the statutory damage structures of the major federal employment laws. This page explains each component of the damages model so you can understand what the calculator is — and is not — measuring.
+    Our calculator combines the statutory damage rules of the major federal employment laws with a few simplifying assumptions, which are labeled as assumptions below. The statutes are listed in the Sources section at the end of this page. This page explains each component of the damages model so you can understand what the calculator is — and is not — measuring.
   </p>
 
   <h2>1. Back Pay</h2>
@@ -18,7 +18,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     Back pay is the cornerstone of any wrongful termination damages calculation. It represents the wages, salary, bonuses, commissions, and employment benefits (health insurance, retirement contributions, and similar compensation) the employee would have earned from the date of termination to the date of final judgment or settlement.
   </p>
   <p>
-    Our model uses an 18-month baseline to resolution, which reflects the median time from EEOC charge filing to settlement for employment discrimination cases. Cases that proceed to trial take considerably longer — often 3 to 5 years — which significantly increases back pay exposure. The calculator applies a range of 60%–100% of the 18-month figure to reflect the realistic probability of mitigation (offsetting earnings from a new job the plaintiff finds before the case resolves).
+    Our model assumes 18 months from termination to resolution. That is a planning assumption, not a measured average: many cases settle sooner, and cases that go to trial take longer. Cases that proceed to trial take considerably longer — often 3 to 5 years — which significantly increases back pay exposure. The calculator applies a range of 60%–100% of the 18-month figure to reflect the realistic probability of mitigation (offsetting earnings from a new job the plaintiff finds before the case resolves).
   </p>
   <p>
     <strong>Mitigation duty:</strong> Under both federal and state employment law, a terminated employee has an affirmative duty to mitigate damages by making reasonable efforts to find comparable employment. Earnings from comparable substitute employment are offset against back pay dollar-for-dollar. Failure to mitigate can dramatically reduce a back pay award.
@@ -59,17 +59,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <h2>5. Liquidated Damages Under the FMLA and ADEA</h2>
   <p>
-    The FMLA and ADEA both provide for liquidated damages equal to the amount of back pay owed, effectively doubling the back pay recovery for willful violations. Our FMLA claim type factors in a liquidated damages premium. Courts have discretion to reduce or eliminate liquidated damages if the employer demonstrates good faith and a reasonable belief that its conduct was lawful.
+    The two statutes work differently. Under the ADEA (29 U.S.C. &sect;626(b)), liquidated damages equal to back pay are available only when the violation was willful, meaning the employer knew or showed reckless disregard for whether its conduct was prohibited. Under the FMLA (29 U.S.C. &sect;2617(a)(1)), liquidated damages equal to lost wages, benefits, and interest are the default; the court may reduce them only if the employer proves it acted in good faith and had reasonable grounds to believe it was complying with the law. The calculator&rsquo;s FMLA option does not add liquidated damages automatically, so an FMLA estimate should roughly double the back pay figure unless the employer has a credible good-faith defense.
   </p>
 
   <h2>6. Attorney Fee-Shifting</h2>
   <p>
-    Title VII (42 U.S.C. § 2000e-5(k)), the ADA, the ADEA, the FMLA, and many state employment statutes provide that a prevailing plaintiff is entitled to recover reasonable attorney fees and costs from the employer. This fee-shifting provision is a critical driver of settlement: even a relatively modest $75,000 back pay recovery can carry $150,000–$250,000 in attorney fee exposure for a litigated case. The calculator notes attorney fees separately rather than adding them to the damages range, because fees are determined by the court based on hours reasonably expended.
+    Title VII (42 U.S.C. § 2000e-5(k)), the ADA, the ADEA, the FMLA, and many state employment statutes provide that a prevailing plaintiff is entitled to recover reasonable attorney fees and costs from the employer. This fee-shifting provision is a critical driver of settlement: in a case that is litigated through discovery or trial, the employer&rsquo;s exposure to the employee&rsquo;s attorney fees can exceed the damages themselves, and that risk grows the longer a case runs. The calculator notes attorney fees separately rather than adding them to the damages range, because fees are determined by the court based on hours reasonably expended.
   </p>
 
   <h2>Important Limitations</h2>
   <p>
     This calculator is an educational tool. It does not account for the specific strength of your evidence, the quality of your documentation, your jurisdiction's specific case law, the financial resources of your employer, or the judgment of a particular judge or jury. Actual wrongful termination settlements and verdicts vary enormously. Consult a licensed employment attorney for an assessment of your specific situation.
   </p>
+
+<h2>Sources</h2>
+<ul>
+<li>Title VII of the Civil Rights Act of 1964, 42 U.S.C. &sect;2000e-5 (charge deadlines, back pay limit, attorney fees)</li>
+<li>Civil Rights Act of 1991, 42 U.S.C. &sect;1981a (compensatory and punitive damages and caps for Title VII and ADA claims)</li>
+<li>Americans with Disabilities Act, 42 U.S.C. &sect;12117 (adopts Title VII remedies)</li>
+<li>Age Discrimination in Employment Act, 29 U.S.C. &sect;&sect;626, 630 (remedies, liquidated damages, 20-employee threshold)</li>
+<li>Family and Medical Leave Act, 29 U.S.C. &sect;&sect;2611, 2617 (eligibility, damages, liquidated damages, limitations period)</li>
+<li>42 U.S.C. &sect;1981 and Jones v. R.R. Donnelley &amp; Sons Co., 541 U.S. 369 (2004) (four-year limitations period)</li>
+<li>California Government Code &sect;&sect;12926, 12960 (FEHA coverage and three-year filing period)</li>
+<li>U.S. EEOC, &ldquo;Time Limits for Filing a Charge&rdquo; and &ldquo;Remedies for Employment Discrimination&rdquo;</li>
+</ul>
+
+<h2>Changelog</h2>
+<ul>
+<li><strong>September 2026:</strong> Corrected the description of FMLA and ADEA liquidated damages; relabeled the 18-month resolution period as an assumption; added a damages-and-deadlines table, three worked examples, and this sources list. Replaced the generic editorial byline with publisher attribution.</li>
+<li><strong>May 2026:</strong> Site rebuilt on Astro so every page is delivered as plain HTML.</li>
+</ul>
 
 </BaseLayout>

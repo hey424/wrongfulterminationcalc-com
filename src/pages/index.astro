@@ -4,11 +4,11 @@ import LeadCapture from '../components/LeadCapture.astro';
 ---
 <BaseLayout
   title="Wrongful Termination Settlement Calculator | Estimate Damages | wrongfulterminationcalc.com"
-  description="Estimate your wrongful termination settlement with our free calculator. Input your salary, claim type, and employment history to get a realistic damages range."
+  description="Estimate a wrongful termination settlement range from your salary and claim type. Worked examples, federal damages caps, and filing deadlines by statute. Free, no sign-up."
 >
 
   <div class="byline">
-    <p>Reviewed by <strong>our editorial team</strong>. Updated May 2026.</p>
+    <p>Published by <strong>The Click Lab Agency LLC</strong>. Last reviewed September 2026. Not legal advice.</p>
   </div>
 
   <h1>Wrongful Termination Settlement Calculator</h1>
@@ -81,8 +81,7 @@ import LeadCapture from '../components/LeadCapture.astro';
 
   
 
-  <LeadCapture caseType="wrongful_termination" caseTypeLabel="Wrongful Termination" />
-<h2>How Damages Are Calculated</h2>
+  <h2>How Damages Are Calculated</h2>
   <p>
     Employment attorneys and courts use a relatively consistent framework for calculating wrongful termination damages, though the specific multipliers and caps vary by statute and jurisdiction.
   </p>
@@ -96,24 +95,43 @@ import LeadCapture from '../components/LeadCapture.astro';
   </p>
   <h3>Emotional Distress and Compensatory Damages</h3>
   <p>
-    Federal statutes cap combined compensatory and punitive damages by employer size: $50,000 (15–100 employees), $100,000 (101–200 employees), $200,000 (201–500 employees), $300,000 (501+ employees). State law claims often carry no cap, making state-court filings attractive in high-damages cases.
+    Under Title VII and the ADA, combined compensatory and punitive damages are capped by employer size (42 U.S.C. &sect;1981a(b)(3)): $50,000 for 15&ndash;100 employees, $100,000 for 101&ndash;200, $200,000 for 201&ndash;500, and $300,000 for more than 500. Back pay and front pay are not counted against the cap. Race discrimination claims brought under 42 U.S.C. &sect;1981 have no cap, the ADEA does not allow emotional distress damages at all, and many state statutes &mdash; California&rsquo;s FEHA among them &mdash; have no cap, which is why employees often plead state claims alongside federal ones.
   </p>
   <h3>Attorney Fees</h3>
   <p>
     Title VII, the ADA, the ADEA, and the FMLA all provide for fee-shifting: a prevailing employee can recover their attorney fees from the employer. This is a powerful litigation lever that often drives settlement, as even a modest back pay award can carry substantial fee exposure for the employer.
   </p>
 
-  <h2>Typical Recovery Ranges by Claim Type</h2>
-  <p>
-    Based on EEOC charge data, published verdict reporters, and employment law practice resources, typical settlement ranges (not including attorney fees) are:
-  </p>
-  <ul>
-    <li><strong>Discrimination (federal):</strong> $25,000–$300,000 median; high-value cases reach $1M+</li>
-    <li><strong>Retaliation:</strong> $50,000–$400,000; retaliation claims often command higher awards because juries respond strongly to punishing good-faith whistleblowers</li>
-    <li><strong>FMLA violation:</strong> $10,000–$150,000 (liquidated damages double back pay for willful violations)</li>
-    <li><strong>Breach of contract:</strong> Highly variable; contract terms define the floor and ceiling</li>
-    <li><strong>Public policy/whistleblower:</strong> Wide range; California FEHA and similar state laws can produce seven-figure awards</li>
-  </ul>
+  <h2>Damages rules and deadlines by claim type</h2>
+  <p>The calculator above produces a rough range. The law that actually governs your claim decides which pieces of that range are available, whether a cap applies, and how long you have to act. The deadlines below are the ones people most often miss.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead>
+      <tr><th>Law</th><th>Who it covers</th><th>What you can recover</th><th>Cap</th><th>First step and deadline</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Title VII (race, color, religion, sex, national origin)</td><td>Employers with 15+ employees</td><td>Back pay (reaching back no more than 2 years before the charge), front pay, compensatory and punitive damages, attorney fees</td><td>$50,000&ndash;$300,000 on compensatory + punitive, by employer size</td><td>EEOC charge within 180 days, or 300 days where a state or local agency also enforces the law</td></tr>
+      <tr><td>ADA Title I (disability)</td><td>Employers with 15+ employees</td><td>Same remedies as Title VII</td><td>Same caps as Title VII</td><td>EEOC charge, same 180/300-day window</td></tr>
+      <tr><td>ADEA (age 40+)</td><td>Employers with 20+ employees</td><td>Back pay, front pay, attorney fees; liquidated damages equal to back pay if the violation was willful</td><td>No emotional distress or punitive damages available</td><td>EEOC charge, same 180/300-day window</td></tr>
+      <tr><td>FMLA (medical or family leave)</td><td>Employers with 50+ employees within 75 miles; employee with 12 months and 1,250 hours of service</td><td>Lost wages and benefits plus interest, and liquidated damages in an equal amount unless the employer proves good faith; attorney fees</td><td>No emotional distress damages</td><td>No agency charge needed; lawsuit within 2 years, or 3 if willful</td></tr>
+      <tr><td>42 U.S.C. &sect;1981 (race)</td><td>Employers of any size</td><td>Back pay, compensatory and punitive damages, attorney fees</td><td>No statutory cap</td><td>No agency charge needed; generally 4 years to sue</td></tr>
+      <tr><td>California FEHA</td><td>Employers with 5+ employees</td><td>Back pay, front pay, emotional distress, punitive damages, attorney fees</td><td>No cap</td><td>Complaint with the California Civil Rights Department within 3 years</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:.9rem;color:#555">Coverage thresholds and deadlines are from the statutes cited on the <a href="/methodology/">methodology page</a>. Other states have their own anti-discrimination laws and agencies, often with different deadlines; check your state&rsquo;s fair employment agency before relying on the federal window.</p>
+
+  <h2>Worked examples</h2>
+  <p>These examples use round numbers so the arithmetic is easy to follow. They show how the legal rules in the table change the result more than the salary does.</p>
+
+  <h3>Example 1 &mdash; Sex discrimination under Title VII, mid-size employer</h3>
+  <p>An account manager earning $60,000 a year is fired by a company with 150 employees. She is out of work for 14 months, then takes a job paying $54,000. The case settles 10 months after she starts the new job. Back pay is 14 &times; $5,000 = $70,000 for the months with no income, plus 10 &times; $500 = $5,000 for the pay gap afterward, or $75,000. A jury that valued her emotional distress at $250,000 and added $150,000 in punitive damages would still see those two figures cut to the $100,000 cap for a 101&ndash;200 employee company. Total: $175,000 plus attorney fees. The same facts under California&rsquo;s FEHA would not be capped.</p>
+
+  <h3>Example 2 &mdash; Willful age discrimination under the ADEA</h3>
+  <p>A 58-year-old operations director earning $90,000 is replaced by a 34-year-old after a manager&rsquo;s emails refer to &ldquo;getting younger.&rdquo; He finds comparable work after 12 months. Back pay is $90,000. Because the evidence supports a finding that the violation was willful, the ADEA adds liquidated damages in the same amount, for $180,000 plus fees. The ADEA allows nothing for emotional distress, so a parallel state-law age claim is often what adds value beyond double back pay.</p>
+
+  <h3>Example 3 &mdash; FMLA interference</h3>
+  <p>A warehouse supervisor earning $48,000 is fired during approved FMLA leave for surgery. He is out of work for six months. Lost wages are $24,000, and the employer&rsquo;s share of his health premium, about $600 a month, adds $3,600, for $27,600. The FMLA adds an equal amount as liquidated damages unless the employer shows it acted in good faith with reasonable grounds to believe it was complying, bringing the estimate to $55,200 plus interest and fees. There is no EEOC step; he has two years to sue, three if the violation was willful.</p>
 
   <h2>Factors That Increase or Reduce Recovery</h2>
   <p><strong>Factors that increase damages:</strong> documented discriminatory statements by decision-makers; short tenure between a protected activity and the termination; comparator evidence (coworkers outside the protected class kept their jobs); employer's failure to follow its own progressive discipline policy; prior complaints to HR that were ignored; retaliatory conduct continuing post-termination (e.g., bad references).</p>
@@ -126,6 +144,15 @@ import LeadCapture from '../components/LeadCapture.astro';
     <li><a href="/guides/what-to-do-after-wrongful-termination/">What to Do After Wrongful Termination</a></li>
     <li><a href="/guides/wrongful-termination-vs-at-will-employment/">Wrongful Termination vs. At-Will Employment</a></li>
   </ul>
+
+  <h2>What this calculator does not do</h2>
+  <p>It does not decide whether your firing was illegal; that depends on evidence the calculator never sees. It assumes an 18-month path to resolution for back pay, which is a planning assumption rather than a measured average, and it does not subtract what you earn at a new job. The emotional distress figures are rough multiples of salary chosen to show the spread between claim types, not predictions drawn from verdict data. It does not apply the Title VII and ADA caps for you, does not add punitive damages, prejudgment interest, or tax effects, and does not model state laws other than in the general way described above. Use it to understand the moving parts, then check the numbers against the table and the worked examples.</p>
+
+  <h2>Where to get help</h2>
+  <p>For discrimination, retaliation, or disability claims, the first step is usually a charge with the U.S. Equal Employment Opportunity Commission (EEOC) or your state fair employment agency; filing is free and does not require a lawyer, but the 180- or 300-day deadline is strict. FMLA and wage claims can go to the U.S. Department of Labor&rsquo;s Wage and Hour Division. Write down dates, names, and what was said while you still remember, and keep copies of performance reviews, emails, and your termination letter. Employment attorneys often take strong cases on contingency because the federal statutes award fees to a prevailing employee. If you would like The Click Lab to pass your details to an attorney in its network, the optional form below does that; it is a disclosed referral product, and our <a href="/privacy/">privacy policy</a> explains exactly what is shared.</p>
+
+  <LeadCapture caseType="wrongful_termination" caseTypeLabel="Wrongful Termination" />
+
 
   <style>
     .byline { background: #f7f7f7; border-left: 3px solid var(--color-accent); padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--color-muted); }
