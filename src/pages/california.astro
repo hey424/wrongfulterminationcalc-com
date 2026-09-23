@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="California Wrongful Termination Settlement Calculator (FEHA, Tameny, §1102.5) | wrongfulterminationcalc.com"
+  description="Estimate the economic side of a California wrongful termination claim: back pay, front pay, late final pay penalties, and whistleblower penalties. Deadlines and uncapped FEHA damages explained."
+>
+  <p class="cabyline">Published by <strong>The Click Lab Agency LLC</strong>. Last reviewed September 2026. Not legal advice.</p>
+
+  <h1>California Wrongful Termination Settlement Calculator</h1>
+
+  <p>California is an at-will state (Labor Code &sect;2922), but its employment laws give fired workers more ways to recover than federal law does. The biggest difference is money: federal discrimination claims cap emotional distress and punitive damages at $50,000&ndash;$300,000 depending on employer size, while California&rsquo;s Fair Employment and Housing Act (FEHA) has no cap at all. California also covers smaller employers, gives you longer to file, and adds penalties that federal law does not have.</p>
+  <p>This calculator totals the parts of a California claim that follow a formula &mdash; lost pay, future lost pay, late final paycheck penalties, and the whistleblower civil penalty. It deliberately does not put a number on emotional distress or punitive damages, because in California those are uncapped and depend entirely on the evidence and the jury. The <a href="/">main calculator</a> shows an illustrative range for those if you want one.</p>
+
+  <h2>Run the California estimate</h2>
+  <form id="ca-form">
+    <label for="ca-salary">Annual pay at the job you lost ($)</label>
+    <input type="number" id="ca-salary" min="0" step="1000" value="72000" />
+
+    <label for="ca-out">Months without work after the firing</label>
+    <input type="number" id="ca-out" min="0" max="120" step="1" value="6" />
+
+    <label for="ca-new">Annual pay at your new job, if any ($; enter 0 if still looking)</label>
+    <input type="number" id="ca-new" min="0" step="1000" value="64000" />
+
+    <label for="ca-resolve">Months from starting the new job until the case resolves</label>
+    <input type="number" id="ca-resolve" min="0" max="120" step="1" value="12" />
+
+    <label for="ca-front">Months of future pay gap to claim as front pay (0 if none)</label>
+    <input type="number" id="ca-front" min="0" max="120" step="1" value="12" />
+
+    <label for="ca-late">Days your final paycheck was late (0&ndash;30; enter 0 if paid on your last day)</label>
+    <input type="number" id="ca-late" min="0" max="365" step="1" value="0" />
+
+    <label for="ca-wb">Were you fired for reporting a suspected violation of law (Labor Code &sect;1102.5)?</label>
+    <select id="ca-wb">
+      <option value="no" selected>No</option>
+      <option value="yes">Yes</option>
+    </select>
+
+    <button type="submit">Calculate</button>
+  </form>
+  <div id="ca-result" aria-live="polite"></div>
+
+  <h2>California rules that change the number</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Claim</th><th>Who it covers</th><th>What you can recover</th><th>Deadline</th></tr></thead>
+    <tbody>
+      <tr><td>FEHA discrimination or retaliation (Gov. Code &sect;12940)</td><td>Employers with 5 or more employees; harassment claims apply to employers of any size</td><td>Back pay, front pay, emotional distress, punitive damages, attorney fees &mdash; no cap</td><td>Complaint with the Civil Rights Department (CRD) within 3 years; then 1 year to sue after the right-to-sue notice</td></tr>
+      <tr><td>Wrongful termination in violation of public policy (<em>Tameny</em>)</td><td>Any employer</td><td>Lost pay, emotional distress, punitive damages</td><td>2 years from the firing</td></tr>
+      <tr><td>Whistleblower retaliation (Labor Code &sect;1102.5)</td><td>Any employer</td><td>Lost pay, a civil penalty of up to $10,000 per violation awarded to the employee, attorney fees</td><td>Generally 3 years for lost pay; courts have applied a shorter 1-year period to the penalty, so act early</td></tr>
+      <tr><td>Late final pay (Labor Code &sect;&sect;201, 203)</td><td>Any employer</td><td>A day&rsquo;s wages for each day the final paycheck is late, up to 30 days</td><td>Final pay is due on the day you are fired</td></tr>
+      <tr><td>CFRA leave retaliation (Gov. Code &sect;12945.2)</td><td>Employers with 5 or more employees</td><td>Same remedies as FEHA</td><td>Same as FEHA</td></tr>
+      <tr><td>Federal Title VII / ADA (for comparison)</td><td>Employers with 15 or more employees</td><td>Emotional distress + punitive capped at $50,000&ndash;$300,000</td><td>EEOC charge within 300 days in California</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:.9rem;color:#555">A charge filed with the EEOC is generally cross-filed with the CRD, and the reverse, under a work-sharing agreement. The deadlines above are the outer limits; waiting can make evidence harder to gather.</p>
+
+  <h2>Worked example</h2>
+  <p>A project coordinator in Sacramento earning $72,000 reports to HR that her manager is falsifying safety inspection records. Three weeks later she is fired for &ldquo;performance,&rdquo; with no prior write-ups, and her final paycheck arrives 10 days late. She is out of work for 6 months and then takes a job paying $64,000. The case resolves 12 months after she starts the new job.</p>
+  <ul>
+    <li>Back pay while unemployed: 6 &times; $6,000 = $36,000</li>
+    <li>Back pay for the pay gap afterward: 12 &times; ($6,000 &minus; $5,333) &asymp; $8,000</li>
+    <li>Front pay for another 12 months of the gap: about $8,000</li>
+    <li>Waiting-time penalty: 10 days &times; ($72,000 &divide; 260 working days &asymp; $277) &asymp; $2,769</li>
+    <li>Labor Code &sect;1102.5 civil penalty: up to $10,000</li>
+  </ul>
+  <p>Formula-driven total: about $64,769, plus attorney fees. Because she was fired within 90 days of her report, California law presumes retaliation and the employer has to prove otherwise. On top of that sits whatever a jury would award for emotional distress and, if the employer acted with malice, oppression, or fraud shown by clear and convincing evidence, punitive damages &mdash; neither of which is capped under FEHA or a <em>Tameny</em> claim.</p>
+
+  <h2>What this calculator does not do</h2>
+  <p>It does not decide whether your firing broke California law. It treats a salaried worker&rsquo;s daily wage as annual pay divided by 260 working days; hourly workers should use their actual daily earnings. It does not add emotional distress, punitive damages, lost benefits, interest, or tax effects, and it does not reduce back pay for a job you could have taken but did not. It applies the &sect;1102.5 penalty at the $10,000 maximum for a single violation; a court can award less. Front pay is whatever you enter; courts decide it case by case.</p>
+
+  <h2>Where to get help</h2>
+  <p>You can file a complaint with the California Civil Rights Department online at calcivilrights.ca.gov for discrimination, harassment, or FEHA retaliation; filing is free. Late final pay and some retaliation claims can go to the Labor Commissioner&rsquo;s Office (DLSE). If you plan to sue right away, you can request an immediate right-to-sue notice from the CRD. Employment attorneys in California often take strong cases on contingency because FEHA and &sect;1102.5 award fees to a prevailing employee. The <a href="/">homepage</a> has an optional, disclosed referral form if you would like The Click Lab to pass your details to an attorney in its network.</p>
+
+  <h2>Sources</h2>
+  <ul>
+    <li>California Labor Code &sect;&sect;201, 203 (final pay and waiting-time penalties), &sect;1102.5 (whistleblower protection, civil penalty, fees, rebuttable presumption within 90 days), &sect;2922 (at-will employment)</li>
+    <li>California Government Code &sect;12926 (5-employee coverage), &sect;12940 (FEHA prohibitions; harassment by any employer), &sect;12945.2 (CFRA), &sect;&sect;12960, 12965 (filing deadlines, right-to-sue, remedies, fees)</li>
+    <li>California Civil Code &sect;3294 (punitive damages standard)</li>
+    <li>California Code of Civil Procedure &sect;335.1 (two-year limitations period for <em>Tameny</em> claims), &sect;338 (three-year period for statutory claims), &sect;340 (one-year period for statutory penalties)</li>
+    <li><em>Tameny v. Atlantic Richfield Co.</em>, 27 Cal.3d 167 (1980)</li>
+    <li>42 U.S.C. &sect;1981a(b)(3) (federal caps, for comparison)</li>
+  </ul>
+
+  <p>Related: <a href="/">main settlement calculator</a> &middot; <a href="/methodology/">methodology</a> &middot; <a href="/guides/what-to-do-after-wrongful-termination/">what to do after a wrongful termination</a></p>
+
+  <style>
+    .cabyline { background:#f7f7f7; border-left:3px solid var(--color-accent); padding:.75rem 1rem; margin-bottom:1.5rem; font-size:.9rem; color:var(--color-muted); }
+    #ca-result { background:#eef4fb; border:1px solid #b3d0f0; border-radius:6px; padding:1rem 1.25rem; margin:1rem 0 2rem; display:none; }
+  </style>
+  <script>
+    document.getElementById('ca-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const v = id => Math.max(0, parseFloat(document.getElementById(id).value) || 0);
+      const salary = v('ca-salary'), out = v('ca-out'), newPay = v('ca-new'), resolve = v('ca-resolve'), front = v('ca-front');
+      const late = Math.min(30, v('ca-late'));
+      const wb = document.getElementById('ca-wb').value === 'yes';
+      const monthly = salary / 12;
+      const gap = Math.max(0, salary - newPay) / 12;
+      const backUnemployed = monthly * out;
+      const backGap = newPay > 0 ? gap * resolve : monthly * resolve;
+      const frontPay = (newPay > 0 ? gap : monthly) * front;
+      const waiting = (salary / 260) * late;
+      const penalty = wb ? 10000 : 0;
+      const total = backUnemployed + backGap + frontPay + waiting + penalty;
+      const f = n => '$' + Math.round(n).toLocaleString();
+      const r = document.getElementById('ca-result');
+      r.innerHTML = '<strong>Formula-driven total: ' + f(total) + '</strong><br>' +
+        'Back pay while unemployed: ' + f(backUnemployed) + '<br>' +
+        (newPay > 0 ? 'Back pay for the pay gap until resolution: ' : 'Back pay from month ' + out + ' until resolution (no new job): ') + f(backGap) + '<br>' +
+        'Front pay: ' + f(frontPay) + '<br>' +
+        'Waiting-time penalty (' + late + ' days): ' + f(waiting) + '<br>' +
+        (wb ? 'Labor Code &sect;1102.5 civil penalty (maximum, one violation): ' + f(penalty) + '<br>' : '') +
+        '<em>Not included: emotional distress and punitive damages, which are uncapped under FEHA and Tameny claims; attorney fees, which are recoverable separately.</em>';
+      r.style.display = 'block';
+    });
+  </script>
+</BaseLayout>
